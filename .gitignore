@@ -1,2 +1,5 @@
 .vscode
 .DS_Store
+
+data/Lots_of_flight_data.csv
+data/Jan_2019_ontime.csv
