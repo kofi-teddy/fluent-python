@@ -147,3 +147,5 @@ dmypy.json
 .DS_Store
 .ds_store 
 media
+
+__pycache__
