@@ -26,4 +26,5 @@
 - List comprehension
 - Iteration iter
 - Json
+- Arrays
 
