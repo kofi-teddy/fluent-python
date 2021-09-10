@@ -24,6 +24,6 @@
 - Decorators
 - Working with packages and modules
 - List comprehension
-- Interaions iter
+- Iteration iter
 - Json
 
