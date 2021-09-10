@@ -23,3 +23,7 @@
 - Setting up env using python-dotenv
 - Decorators
 - Working with packages and modules
+- List comprehension
+- Interaions iter
+- Json
+
