@@ -28,3 +28,4 @@
 - Json
 - Arrays
 - Method Resolution Order
+- Magic Dunder
