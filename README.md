@@ -29,3 +29,4 @@
 - Arrays
 - Method Resolution Order
 - Magic Dunder
+- Decorators - getters, setters, deleters
