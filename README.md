@@ -27,4 +27,5 @@
 - Iteration iter
 - Json
 - Arrays
+- Method Resolution Order
 
