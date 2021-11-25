@@ -28,5 +28,11 @@
 - Json
 - Arrays
 - Method Resolution Order
+- classses, objects, inheritance, classvariables, attributes, classmethods, staticmethods 
 - Magic Dunder
 - Decorators - getters, setters, deleters
+- Clousers
+- First class functions
+- Mutable and Immutable
+- Memoization
+- Combination and Permutations
