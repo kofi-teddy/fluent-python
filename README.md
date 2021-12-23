@@ -37,3 +37,4 @@
 - Memoization
 - Combination and Permutations
 - Working with map()
+- working reduce()
