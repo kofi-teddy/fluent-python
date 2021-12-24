@@ -39,3 +39,4 @@
 - Working with map()
 - working with reduce()
 - working with filter()
+- functional programming
