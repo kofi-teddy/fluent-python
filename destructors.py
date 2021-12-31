@@ -54,3 +54,5 @@ def fun():
     b = B()
 
 fun()
+
+

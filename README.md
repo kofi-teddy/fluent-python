@@ -46,3 +46,4 @@
 - multithreading 2
 - constructors
 - destructures
+- inheritance
