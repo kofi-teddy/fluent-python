@@ -47,3 +47,5 @@
 - constructors
 - destructures
 - inheritance
+- types of inheritance
+
