@@ -48,4 +48,4 @@
 - destructures
 - inheritance
 - types of inheritance
-
+- encapsulation
