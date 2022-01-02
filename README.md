@@ -49,3 +49,4 @@
 - inheritance
 - types of inheritance
 - encapsulation
+- private variables
