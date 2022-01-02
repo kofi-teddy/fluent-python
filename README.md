@@ -52,3 +52,4 @@
 - private variables
 - polymorphism
 - class variables
+- class and staticmethods
