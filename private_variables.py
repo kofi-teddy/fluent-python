@@ -19,7 +19,7 @@ class MapSubclass(Map):
     # provide new signature for magud() but
     # does not break __init__()
     def geek(self, key, value):
-        for i in zip(keys, value):
+        for i in zip(key, value):
             self.list.append(i)
 
 
