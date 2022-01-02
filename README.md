@@ -50,3 +50,4 @@
 - types of inheritance
 - encapsulation
 - private variables
+- polymorphism
