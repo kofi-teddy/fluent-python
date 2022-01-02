@@ -51,3 +51,4 @@
 - encapsulation
 - private variables
 - polymorphism
+- class variables
