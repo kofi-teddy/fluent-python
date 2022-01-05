@@ -28,40 +28,44 @@ import sys
 # print('the socket has successfully connected to skycrew technologies')
 
 
-# A simple server-client program
-# create a socket object 
-s = socket.socket()
-print('Socket successfully created')
+# # A simple server-client program
+# # create a socket object 
+# s = socket.socket()
+# print('Socket successfully created')
 
-# reserve a port on your computer in our
-# case it is 12345 baut it can be anything
-port = 12345
+# # reserve a port on your computer in our
+# # case it is 12345 baut it can be anything
+# port = 12345
 
-# next bind to the port
-# we have not typed any ip in the field
-# instead we have inputted an empty string
-# this makes the server listen to requests
-# coming from other computers on the network
-s.bind(('', port))
-print(f'socket binded to {port}')
+# # next bind to the port
+# # we have not typed any ip in the field
+# # instead we have inputted an empty string
+# # this makes the server listen to requests
+# # coming from other computers on the network
+# s.bind(('', port))
+# print(f'socket binded to {port}')
 
-# put the socket into listening mode
-s.listen(5)
-print('socket is listening')
+# # put the socket into listening mode
+# s.listen(5)
+# print('socket is listening')
 
-# a forever loop until we interrupt it or
-# an error occurs
-while True:
-    # established connection with client.
-    c, addr = s.accept()
-    print(f'got connection from {addr}')
+# # a forever loop until we interrupt it or
+# # an error occurs
+# while True:
+#     # established connection with client.
+#     c, addr = s.accept()
+#     print(f'got connection from {addr}')
 
-    # send a thank you message to the client. encoding to send byte type.
-    c.send('Thank you for connecting'.encode())
+#     # send a thank you message to the client. encoding to send byte type.
+#     c.send('Thank you for connecting'.encode())
 
-    # clode the connection with the client
-    c.close()
+#     # clode the connection with the client
+#     c.close()
 
-    # breaking once connection closed
-    break
+#     # breaking once connection closed
+#     break
+
+
+ip = socket.gethostbyname('www.skycrew.tech')
+print(ip)
 
