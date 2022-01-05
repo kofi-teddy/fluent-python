@@ -55,4 +55,7 @@
 - class and staticmethods
 - multiprocessing 1
 - multiprocessing 2
-- socket programming
+- socket programming 1
+- socket programming 2
+- socket programming 3
+- immutable dict 
