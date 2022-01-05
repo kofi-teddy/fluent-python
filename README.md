@@ -54,3 +54,5 @@
 - class variables
 - class and staticmethods
 - multiprocessing 1
+- multiprocessing 2
+- socket programming
