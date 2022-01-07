@@ -274,5 +274,42 @@ de.pop()
 de.popleft()
 
 # printing modified deque
-print('The deque after deleting from left is: ')
-print(de)
+# print('The deque after deleting from left is: ')
+# print(de)
+
+
+# python UserDict
+from collections import UserDict
+
+# creating a Dictionary where 
+# deletion is not allowed 
+class MyDict(UserDict):
+
+    # function to stop deletion 
+    # from dictionary
+    def __del__(self):
+        raise RuntimeError('Deletion not allowed')
+
+    # function to stop pop form
+    # dictionary
+    def pop(self, s=None):
+        raise RuntimeError('Deletion not allowed')
+
+    # functoin to stop popitem 
+    # from dictionary
+    def popitem(self, s=None):
+        raise RuntimeError('Deletion not allowed')
+
+
+# Driver code 
+# d = MyDict({
+#     'b': 2, 
+#     'c': 3
+# })
+
+# print('Original Dictionary')
+# print(d)
+
+# d.pop(1)
+
+
