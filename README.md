@@ -61,3 +61,5 @@
 - immutable dict 
 - data structures 
 - data structures linkedlist
+- data structures queue
+- data structures heap
