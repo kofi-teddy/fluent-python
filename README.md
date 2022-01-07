@@ -60,3 +60,4 @@
 - socket programming 3
 - immutable dict 
 - data structures 
+- data structures linkedlist
