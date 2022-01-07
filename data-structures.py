@@ -313,3 +313,36 @@ class MyDict(UserDict):
 # d.pop(1)
 
 
+# python UserList
+# python program to demonstrate
+# userlist
+from collections import UserList
+
+
+# creating a list where 
+# deletion is not allowed
+class MyList(UserList):
+
+    # function to stop deletion
+    # from List
+    def remove(self, s=None):
+        raise RuntimeError('Deletion not allowed')
+
+    # function to stop pop from 
+    # List
+    def pop(self, s=None):
+        raise RuntimeError('Deletion not allowed')
+
+# Driver code 
+l = MyList([1, 2, 3, 4])
+
+# print('Original list')
+# print(l)
+
+# inserting to list1
+# l.append(5)
+# print('After Insertion')
+# print(l)
+
+# deleting from list
+# l.remove()
