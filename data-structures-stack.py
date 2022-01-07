@@ -1,65 +1,84 @@
-# advance data structures
-# linked list in python
-# node code
-class Node:
+# advance data structures 
+# stack
+# implementing using list
 
-    # function to initialize the node object
-    def __init__(self, data):
-        self.data = data # assign data 
-        self.next = None # initialize next as null
+# stack = []
 
-# lint list class
-class LinkedList:
+# append() function to push 
+# element in the stack 
+# stack.append('g')
+# stack.append('f')
+# stack.append('g')
 
-    # function to initialize the linked 
-    # list object 
-    def __init__(self):
-        self.head = None
+# print('initial stack')
+# print(stack)
 
-    # this function prints contents of linked list object
-    # starting from head
-    def printList(self):
-        temp = self.head
-        while(temp):
-            print(temp.data)
-            temp = temp.next
+# pop() funtion to pop 
+# element from stack in 
+# LIFO
+# print('\nelements popped from stack: ')
+# print(stack.pop())
+# print(stack.pop())
+# print(stack.pop())
+
+# print('\nstack after elements are popped')
+# print(stack)
+
+# uncommenting print(stack.pop())
+# will cause an IndexError
+# as the stack is now empty
 
 
-# code execution starts here 
-if __name__=='__main__':
+# implementing using collectio.deque 
+from collections import deque 
 
-    # start with the empty list 
-    mylist = LinkedList()
+# stack = deque()
 
-    mylist.head = Node(1)
-    second = Node(2)
-    third = Node(3)
+# append() function to push 
+# element in the stack 
+# stack.append('g')
+# stack.append('f')
+# stack.append('g')
 
-    '''
-    three nodes have been created
-    we have reference to there 3 blocks as head, second and third
+# print('initial stack')
+# print(stack)
 
-     llist.head     second             third
-        |             |                 |
-        |             |                 |
-    +----+------+     +----+------+     +----+------+
-    | 1 | None |     | 2 | None |     | 3 | None |
-    +----+------+     +----+------+     +----+------+
-    '''
+# pop() funtion to pop 
+# element from stack in 
+# LIFO
+# print('\nelements popped from stack: ')
+# print(stack.pop())
+# print(stack.pop())
+# print(stack.pop())
 
-    mylist.head.next = second # Link second node with the third node
+# print('\nstack after elements are popped')
+# print(stack)
 
-    '''
-    Now next of second Node refers to third. So all three
-    nodes are linked.
- 
-    llist.head     second             third
-        |             |                 |
-        |             |                 |
-    +----+------+     +----+------+     +----+------+
-    | 1 | o-------->| 2 | o-------->| 3 | null |
-    +----+------+     +----+------+     +----+------+
-    '''
-    second.next = third
 
-    mylist.printList()
+# implementing using queue
+from queue import LifoQueue
+
+
+# initializing a stack 
+# stack = LifoQueue(maxsize=3)
+
+# qsize() show the number of elements in the stack
+# print(stack.qsize())
+
+# put() function to push 
+# element in the stack
+# stack.put('g')
+# stack.put('f')
+# stack.put('g')
+
+# print('full:L ', stack.full())
+# print('size: ', stack.qsize())
+
+# get() function to pop element from stack in
+# LIFI order
+# print('\nelements popped from the stack')
+# print(stack.get())
+# print(stack.get())
+# print(stack.get())
+
+# print('\nEmpty: ', stack.empty())
