@@ -346,3 +346,34 @@ l = MyList([1, 2, 3, 4])
 
 # deleting from list
 # l.remove()
+
+
+# python UserString
+from collections import UserString
+
+
+# creating a Mutable String 
+class Mystring(UserString):
+
+    # function to append to 
+    # string
+    def append(self, s):
+        self.data += s
+
+    # fucntion to remove from 
+    # string
+    def remove(self, s):
+        self.data = self.data.replace(s, '')
+
+# drivers code
+s1 = Mystring('teddy')
+print('Original String: ', s1.data)
+
+# appending to string
+s1.append('s')
+# print('String After Appending: ', s1.data)
+
+# removing from string
+s1.remove('e')
+print('String after removing: ', s1.data)
+
