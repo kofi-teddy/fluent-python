@@ -63,3 +63,4 @@
 - data structures linkedlist
 - data structures queue
 - data structures heap
+- data structures binary tree
