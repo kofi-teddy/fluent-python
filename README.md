@@ -64,3 +64,4 @@
 - data structures queue
 - data structures heap
 - data structures binary tree
+- data structures graph
