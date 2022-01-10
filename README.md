@@ -65,3 +65,4 @@
 - data structures heap
 - data structures binary tree
 - data structures graph
+- data class 1
