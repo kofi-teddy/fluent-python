@@ -67,4 +67,7 @@
 - data structures graph
 - data class 1
 - data class 2
-- ChainMap
+- ChainMap 1
+- ChainMap 3
+- ChainMap 4
+- ChainMap 5
