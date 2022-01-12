@@ -66,3 +66,5 @@
 - data structures binary tree
 - data structures graph
 - data class 1
+- data class 2
+- ChainMap
