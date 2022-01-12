@@ -58,12 +58,16 @@ chain1 = chain.new_child(dict3)
 # print(chain1.maps)
 
 # displaying value associated with before revervsing
-print('Value associated with before revervsing is: ', end='')
-print(chain1['b'])
+# print('Value associated with before revervsing is: ', end='')
+# print(chain1['b'])
 
 # reversing the ChainMap
 chain1.maps = reversed(chain1.maps)
 
 # displaying value associated with b after revervsing
-print('Value associated with b after revervsing is: ', end='')
-print(chain1['b'])
+# print('Value associated with b after revervsing is: ', end='')
+# print(chain1['b'])
+
+
+
+
