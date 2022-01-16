@@ -1,5 +1,6 @@
 # OOP
 # Inheritance
+# overriding and super
 from __future__ import annotations
 from pprint import pprint
 
@@ -39,6 +40,11 @@ class Supplier(Contact):
         )
 
 
+class Friend(Contact):
+    def __init__(self, name: str, email: str, phone: str) -> None:
+        super().__init__(name, email)
+        self.phone = phone
+
 # c_1 = Contact('kofi', 'kofi@skycrew.tech')
 # s_1 = Supplier('louis', 'louis@skycrew.tech')
 # print(c_1.name, c_1.email, s_1.name, s_1.email)
@@ -55,6 +61,9 @@ c1 = Contact('Kofi T', 'kofi@skycrew.tech')
 c1 = Contact('Kofi A', 'Fii@skycrew.tech')
 c2 = Contact('Louis A', 'lous@skycrew.tech')
 c3 = Contact('Sefaah O', 'sefaah@skycrew.tech')
-print([c.name for c in Contact.all_contacts.search('Kofi')])
+# print([c.name for c in Contact.all_contacts.search('Kofi')])
 
-print([] == list())
+# print([] == list())
+
+f = Friend('Selorm A', 'selorm@skycrew.tech', '023000000')
+print(Contact.all_contacts)
