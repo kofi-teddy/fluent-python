@@ -2,6 +2,7 @@
 # Exceptions handling  
 
 from typing import List, NoReturn, Union
+from decimal import Decimal
 
 
 # class EvenOnly(List[int]):
@@ -45,9 +46,7 @@ from typing import List, NoReturn, Union
 #         return 'Zero is not a good idea!'
 
 
-from decimal import Decimal
-
-
+# Sample Bank application exception handling
 class InvalidWithdrawal(ValueError):
     def __init__(self, balance: Decimal, amount: Decimal) -> None:
         super().__init__(f'account doesn"t have GHS{amount}')
