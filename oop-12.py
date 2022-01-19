@@ -36,13 +36,26 @@ from typing import List, NoReturn, Union
 #     print('Executed after the exception')
 
 
-def funny_division(divisor: float) -> Union[str, float]:
-    try:
-        if divisor == 13:
-            raise ValueError('13 is an unlucky number')
-        return 100 / divisor
-    except ZeroDivisionError:
-        return 'Zero is not a good idea!'
+# def funny_division(divisor: float) -> Union[str, float]:
+#     try:
+#         if divisor == 13:
+#             raise ValueError('13 is an unlucky number')
+#         return 100 / divisor
+#     except ZeroDivisionError:
+#         return 'Zero is not a good idea!'
+
+
+from decimal import Decimal
+
+
+class InvalidWithdrawal(ValueError):
+    def __init__(self, balance: Decimal, amount: Decimal) -> None:
+        super().__init__(f'account doesn"t have GHS{amount}')
+        self.amount = amount
+        self.balance = balance
+
+    def overage(self) -> Decimal:
+        return self.amount - self.balance
 
 
 # driver code 
@@ -54,5 +67,12 @@ def funny_division(divisor: float) -> Union[str, float]:
 # print(funny_division(0))
 # print(funny_division(50.0))
 # print(funny_division('hello'))
-for val in (0, 'hello', 50.0, 13):
-    print(f'Testing {val!r}')
+# for val in (0, 'hello', 50.0, 13):
+#     print(f'Testing {val!r}')
+
+# raise InvalidWithdrawal(Decimal('25.00'), Decimal('50.00'))
+try:
+    balance = Decimal('25.00')
+    raise InvalidWithdrawal(balance, Decimal('50.00'))
+except InvalidWithdrawal as ex:
+    print(f'I"m sorry, but your withdrawal is more than your balance by GHS{ex.overage()}')
