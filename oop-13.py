@@ -69,6 +69,8 @@ inv = Inventory([widget, gadget])
 item_to_buy = widget
 inv.lock(item_to_buy)
 
+ 
+
 try:
     num_left = inv.purchase(item_to_buy)
 except InvalidItemType:
@@ -76,7 +78,13 @@ except InvalidItemType:
 except OutOfStock:
     print('Sorry, that item is out of stock.')
 else:
-    print(f'Purchase completed. There are {num_left} {item_to_buy.name}s left')
+    msg = (
+    f'There is {num_left} {item_to_buy.name} left'
+    if num_left == 1
+    else f'There are {num_left} {item_to_buy.name}s left'
+    )
+    print(msg)
+    # print(f'Purchase completed. There are {num_left} {item_to_buy.name}s left')
 finally:
     inv.unlock(item_to_buy)
 
