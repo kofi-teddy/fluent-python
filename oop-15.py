@@ -20,8 +20,19 @@ class Color:
         return self._rgb_value
 
 
+class Color_Py:
+    def __init__(self, rgb_value: int, name: str) -> None:
+        self.rgb_value = rgb_value
+        self.name = name
+
+
 # driver code 
-c = Color(0xff0000, 'bright red')
-print(c.get_name())
-c.set_name('red')
-print(c.get_name())
+# c = Color(0xff0000, 'bright red')
+# print(c.get_name())
+# c.set_name('red')
+# print(c.get_name())
+
+c = Color_Py(0xff0000, 'bright red')
+print(c.name)
+c.name = 'red'
+print(c.name)
