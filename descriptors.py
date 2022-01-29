@@ -8,6 +8,7 @@
 from weakref import WeakKeyDictionary
 
 
+# Data descriptor as it contains set and get only
 # class MyDescriptor():
 #     '''
 #     A simple demo descriptor
@@ -65,5 +66,6 @@ class Person:
         self.name = name
         self.drinker_age = age
 
+# Driver code 
 p = Person('Miguel', 30)
 p = Person('Niki', 13)
