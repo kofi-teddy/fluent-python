@@ -71,5 +71,6 @@
 - ChainMap 3
 - ChainMap 4
 - ChainMap 5
-- using get() to access dictionary
+- Using get() to access dictionary
+- Descriptors
 

@@ -96,7 +96,8 @@ class Friend(Contact, AddressHolder):
 # the different variables directly on the class. But there are a few problems.
 
 # First, it is possible for a superclass to remain uninitialized if we neglect to explicitly
-# call the initializer. That wouldn't break this example, but it could cause hard-todebug program crashes in common scenarios. We would get a lot of strange-looking
+# call the initializer. That wouldn't break this example, but it could cause hard-todebug 
+# program crashes in common scenarios. We would get a lot of strange-looking
 # AttributeError exceptions in classes where there's clearly an __init__() method. It's
 # rarely obvious the __init__() method wasn't actually used.
 # A more insidious possibility is a superclass being called multiple times because of
@@ -240,4 +241,4 @@ ss = Subclass_S()
 ss.call_me()
 
 print(ss.num_sub_calls, ss.num_left_calls, ss.num_right_calls, ss.num_base_calls)
-pprint(Subclass_S.__mro__)
+print(Subclass_S.__mro__)
