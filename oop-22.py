@@ -36,3 +36,9 @@ class Lookup(BaseMapping):
     def __contains__(self, key: obejct) -> bool:
         index = bisect.bisect_left(self.key_list, key)
         return key == self.key_list[index]
+
+    def __getitem__(self, key: Comparable) -> Any:
+        index = bisect.bisect_left(self.key_list, key)
+        if key == self.key_list[index]:
+            return self.value_list[index]
+        raise KeyError(key)
