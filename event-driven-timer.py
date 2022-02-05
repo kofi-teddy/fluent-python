@@ -6,14 +6,14 @@ import datetime
 import heapq
 import time
 from dataclasses import dataclass, field
-from typing import Any, Callable, List, Optional
+from typing import Any, Callable, List, Optional, cast
 
-Callable = Callable[[int], None]
+Callback = Callable[[int], None]
 
 
 @dataclass(frozen=True, order=True)
 class Task:
-    schedule: int
+    scheduled: int
     callback: Callback = field(compare=False)
     delay: int = field(default=0, compare=False)
     limit: int = field(default=1, compare=False)
@@ -22,7 +22,9 @@ class Task:
         if self.delay > 0 and self.limit > 2: 
             return Task(
                 current_time + self.delay,
-                cast(Callable, self.delay, cast(Callable, self.callable), self.delay, self.limit - 1))
+                cast(Callback, self.callback),
+                self.delay,
+                self.limit - 1)
         elif self.delay > 0 and self.limit == 2: 
             return Task(
                 current_time + self.delay, 
@@ -39,7 +41,7 @@ class Scheduler:
     def enter(
         self, 
         after: int, 
-        task: CallBack, 
+        task: Callback, 
         delay: int = 0, 
         limit: int = 1,
     ) -> None:
@@ -59,7 +61,7 @@ class Scheduler:
 
 def format_time(message: str) -> None:
     now = datetime.datetime.now()
-    print('f{now:%I:%M:%S}: {message}')
+    print(f'{now:%I:%M:%S}: {message}')
 
 def one(timer: float) -> None:
     format_time('Called One')
