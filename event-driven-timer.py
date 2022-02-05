@@ -82,6 +82,15 @@ class Repeater:
         format_time(f'Called Four: {self.count}')
 
 
+class Repeater_2:
+    def __init__(self) -> None:
+        self.count = 0
+
+    def __call__(self, timer: float) -> None:
+        self.count += 1
+        format_time(f'Called Four: {self.count}')
+
+
 # driver code 
 s = Scheduler()
 s.enter(1, one)
@@ -93,3 +102,7 @@ s.enter(6, three)
 repeater = Repeater()
 s.enter(5, repeater.four, delay=1, limit=5)
 s.run()
+
+s2 = Scheduler()
+s2.enter(5, Repeater_2(), delay=1, limit=5)
+s2.run()
