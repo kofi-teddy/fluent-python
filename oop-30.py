@@ -21,7 +21,7 @@ dusty_artists = {
 steve_artists = {'Yes', 'Guns N', 'Genesis'}
 
 artists = {'Gun N Roses', 'Vixy and Tony', 'Sarah Brightman', 'Opeth'}
-bands = {'Opeth', 'Guns N Roses'}
+bands = {'Opeth',}
 
 
 # driver code 
