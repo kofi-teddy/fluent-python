@@ -13,7 +13,7 @@ class PayrollSystem:
 
 class Employee:
     '''
-    Employee base class for modeling all employees types
+    Employee base class for modeling all employees types.
     '''
     def __init__(self, id, name):
         self.id = id
@@ -24,6 +24,9 @@ class Employee:
 
 
 class HourlyEmployee(Employee):
+    '''
+    Derived class from employee.
+    '''
     def __init__(self, id, name, hours_worked, hour_rate):
         super().__init__(id, name)
         self.hours_worked = hours_worked
