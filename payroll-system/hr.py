@@ -26,6 +26,7 @@ class Employee:
 class HourlyEmployee(Employee):
     '''
     Derived class from employee.
+    Employees paid by the hour.
     '''
     def __init__(self, id, name, hours_worked, hour_rate):
         super().__init__(id, name)
@@ -34,5 +35,7 @@ class HourlyEmployee(Employee):
 
     def calculate_payroll(self):
         return self.hours_worked * self.hour_rate
+
+
 
     
