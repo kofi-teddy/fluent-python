@@ -18,4 +18,7 @@ class Employee:
         self.id = id
         self.name = name
 
+    def calculate_payroll(self):
+        return self.weekly_salary
+
     
