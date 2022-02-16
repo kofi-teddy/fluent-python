@@ -47,6 +47,9 @@ class HourlyEmployee(Employee):
 
 
 class CommissionEmployee(SalaryEmployee):
+    '''
+    Sales reps paid a fixed salary plus commission on sales.
+    '''
     def __init__(self, id, name, weekly_salary, commission):
         super().__init__(id, name, weekly_salary)
         self.commission = commission
