@@ -8,3 +8,10 @@ class PayrollSystem:
             print(f'Payroll for: {employee.id} - {employee.name}')
             print(f'- Check amount: {employee.calculate_payroll()}')
             print('')
+
+
+class Employee:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
