@@ -23,6 +23,15 @@ class Employee:
         return self.weekly_salary
 
 
+class SalaryEmployee(Employee):
+    '''
+    Permanent employees paid fixed salary weekly.
+    '''
+    def __init__(self, id, name, weekly_salary):
+        super().__init__(self, id, name, weekly_salary)
+        self.weekly_salary = weekly_salary
+
+
 class HourlyEmployee(Employee):
     '''
     Derived class from employee.
