@@ -1,4 +1,4 @@
-#  hr
+#  OOP
 
 class PayrollSystem:
     def calculate_payroll(self, employees):
