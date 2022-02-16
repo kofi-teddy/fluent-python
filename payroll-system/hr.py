@@ -11,7 +11,11 @@ class PayrollSystem:
 
 
 class Employee:
+    '''
+    Employee base class for modeling all employees types
+    '''
     def __init__(self, id, name):
         self.id = id
         self.name = name
 
+    
