@@ -17,7 +17,7 @@ payroll_system.calculate_payroll([
 
 
 productivity_system = productivity.ProductivitySystem()
-productivity_system.tract(employee, 40)
+productivity_system.track(employee, 40)
 payroll_system = hr.PayrollSystem()
 payroll_system.calculate_payroll(employee)
 
