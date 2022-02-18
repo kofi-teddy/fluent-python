@@ -28,7 +28,7 @@ class SalaryEmployee(Employee):
     Permanent employees paid fixed salary weekly.
     '''
     def __init__(self, id, name, weekly_salary):
-        super().__init__(self, id, name, weekly_salary)
+        super().__init__(id, name)
         self.weekly_salary = weekly_salary
 
 

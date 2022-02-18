@@ -1,6 +1,6 @@
 # OOP
 # Driver code
-import . hr
+from . import hr
 
 salary_employee = hr.SalaryEmployee(1, 'Maxine Baddoo', 1500)
 hourly_employee = hr.HourlyEmployee(2, 'Eunice Boakye', 40, 15)
