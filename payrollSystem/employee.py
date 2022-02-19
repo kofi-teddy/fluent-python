@@ -85,4 +85,4 @@ class TemporarySecretary(HourlyEmployee, Secretary):
      Temporary workers.
      '''
      def __init__(self, id, name, hours_worked, hour_rate):
-         super().__init__(id, name, hours_worked, hour_rate)
+         HourlyEmployee.__init__(self, id, name, hours_worked, hour_rate)
