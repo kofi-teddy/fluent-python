@@ -80,8 +80,9 @@ class FactoryWorker(HourlyEmployee):
         print(f'{self.name} manufactures gadgets for {hours} hours.')
 
 
-class TemporarySecretary(Secretary, HourlyEmployee):
+class TemporarySecretary(HourlyEmployee, Secretary):
      '''
      Temporary workers.
      '''
-     pass
+     def __init__(self, id, name, hours_worked, hour_rate):
+         super().__init__(id, name, hours_worked, hour_rate)
