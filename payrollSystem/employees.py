@@ -41,18 +41,14 @@ class Manager(Employee, ManagerRole, SalaryPolicy):
         super().__init__(id, name)
 
 
-class HourlyEmployee(Employee):
+class Secretary(Employee, SecretaryRole, SalaryPolicy):
     '''
     Derived class from employee.
     Employees paid by the hour.
     '''
-    def __init__(self, id, name, hours_worked, hour_rate):
+    def __init__(self, id, name, weekly_salary):
+        SalaryPolicy.__init__(self, weekly_salary)
         super().__init__(id, name)
-        self.hours_worked = hours_worked
-        self.hour_rate = hour_rate
-
-    def calculate_payroll(self):
-        return self.hours_worked * self.hour_rate
 
 
 class CommissionEmployee(SalaryEmployee):
