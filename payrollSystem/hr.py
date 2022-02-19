@@ -37,7 +37,7 @@ class PayrollPolicy:
         self.hours_worked += hours
 
 
-class SalaryPolicy:
+class SalaryPolicy(PayrollPolicy):
     '''
     Permanent employees paid fixed salary weekly.
     '''
@@ -48,7 +48,7 @@ class SalaryPolicy:
         return self.weekly_salary
 
 
-class HourlyPolicy:
+class HourlyPolicy(PayrollPolicy):
     '''
     Derived class from employee.
     Employees paid by the hour.
@@ -65,9 +65,14 @@ class CommissionPolicy(SalaryPolicy):
     '''
     Sales reps paid a fixed salary plus commission on sales.
     '''
-    def __init__(self, weekly_salary, commission):
+    def __init__(self, weekly_salary, commission_per_sale):
         super().__init__(weekly_salary)
-        self.commission = commission
+        self.commission_per_sale = commission_per_sale
+
+    @property
+    def commission(self):
+        sales = self.hours_worked / 5
+        return sales * self.commission_per_sale
     
     def calculate_payroll(self):
         fixed = super().calculate_payroll()
