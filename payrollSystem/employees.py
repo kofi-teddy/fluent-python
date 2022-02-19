@@ -51,25 +51,7 @@ class Secretary(Employee, SecretaryRole, SalaryPolicy):
         super().__init__(id, name)
 
 
-class CommissionEmployee(SalaryEmployee):
-    '''
-    Sales reps paid a fixed salary plus commission on sales.
-    '''
+class SalesPerson(Employee, SalesRole, CommissionPolicy):
     def __init__(self, id, name, weekly_salary, commission):
-        super().__init__(id, name, weekly_salary)
-        self.commission = commission
-    
-    def calculate_payroll(self):
-        fixed = super().calculate_payroll()
-        return fixed + self.commission
-
-
-class TemporarySecretary(Secretary, HourlyEmployee):
-    '''
-    Temporary workers.
-    '''
-    def __init__(self, id, name, hours_worked, hour_rate):
-        HourlyEmployee.__init__(self, id, name, hours_worked, hour_rate)
-
-    def calculate_payroll(self):
-        return HourlyEmployee.calculate_payroll(self)
+        CommissionPolicy.__init__(self, weekly_salary, commission)
+        super().__init__(id, name)
