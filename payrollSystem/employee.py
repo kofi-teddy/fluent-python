@@ -80,7 +80,7 @@ class FactoryWorker(HourlyEmployee):
         print(f'{self.name} manufactures gadgets for {hours} hours.')
 
 
-class TemporarySecretary(HourlyEmployee, Secretary):
+class TemporarySecretary(Secretary, HourlyEmployee):
      '''
      Temporary workers.
      '''
