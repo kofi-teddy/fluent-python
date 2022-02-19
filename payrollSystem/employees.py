@@ -1,6 +1,15 @@
 # OOP 
 # Modeling an HR system
 # Employee models
+from .hr import (
+    SalaryPolicy,
+    CommissionPolicy,
+    HourlyPolicy
+)
+from . productivity import (
+    ManagerRole,
+    S
+)
 
 class PayrollSystem:
     def calculate_payroll(self, employees):

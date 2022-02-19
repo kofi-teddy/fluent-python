@@ -35,7 +35,7 @@ class HourlyPolicy:
         return self.hours_worked * self.hour_rate
 
 
-class CommissionEmployee(SalaryPolicy):
+class CommissionPolicy(SalaryPolicy):
     '''
     Sales reps paid a fixed salary plus commission on sales.
     '''

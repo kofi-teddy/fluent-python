@@ -1,6 +1,6 @@
 # OOP
 # Driver code
-from . import employee
+from . import employees
 from . import productivity
 from . import hr
 
@@ -17,11 +17,11 @@ from . import hr
 # #     temporary_secretary,
 # # ])
 
-manager = employee.Manager(1, 'Eunice Boakye', 3000)
-secretary = employee.Secretary(2, 'Baaba Aggrey', 1500)
-sales_guy = employee.SalesPerson(3, 'Maxine Baddoo', 1000, 250)
-factory_worker = employee.FactoryWorker(4, 'Esther Ahene', 40, 15)
-temporary_secretary = employee.TemporarySecretary(5, 'Kuukua Charlotte', 40, 9)
+manager = employees.Manager(1, 'Eunice Boakye', 3000)
+secretary = employees.Secretary(2, 'Baaba Aggrey', 1500)
+sales_guy = employees.SalesPerson(3, 'Maxine Baddoo', 1000, 250)
+factory_worker = employees.FactoryWorker(4, 'Esther Ahene', 40, 15)
+temporary_secretary = employees.TemporarySecretary(5, 'Kuukua Charlotte', 40, 9)
 
 employees = [
     manager,

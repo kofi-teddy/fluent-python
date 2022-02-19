@@ -9,22 +9,22 @@ class ProductivitySystem:
         print('')
 
 
-class Manager:
+class ManagerRole:
     def work(self, hours):
         print(f'{self.name} screams and yells for {hours} hours.')
 
 
-class Secretary:
+class SecretaryRole:
     def work(self, hours):
         print(f'{self.name} expends {hours} hours doing office paperwork.')
 
 
-class SalesPerson:
+class SalesRole:
     def work(self, hours):
         print(f'{self.name} expends {hours} on the phone.')
 
 
-class FactoryWorker:
+class FactoryRole:
     def work(self, hours):
         print(f'{self.name} manufactures gadgets for {hours} hours.')
 
