@@ -65,25 +65,13 @@ class FactoryWorker(Employee, FactoryRole, HourlyPolicy):
     def __init__(self, id, name, hours_worked, hour_rate):
         HourlyPolicy.__init__(self, hours_worked, hour_rate)
         super().__init__(id, name)
-        
-
-class CommissionEmployee(SalaryEmployee):
-    
-    def __init__(self, id, name, weekly_salary, commission):
-        super().__init__(id, name, weekly_salary)
-        self.commission = commission
-    
-    def calculate_payroll(self):
-        fixed = super().calculate_payroll()
-        return fixed + self.commission
 
 
-class TemporarySecretary(Secretary, HourlyEmployee):
+class TemporarySecretary(Employee, SecretaryRole, HourlyPolicy):
     '''
     Temporary workers.
     '''
     def __init__(self, id, name, hours_worked, hour_rate):
-        HourlyEmployee.__init__(self, id, name, hours_worked, hour_rate)
+        HourlyPolicy.__init__(self, hours_worked, hour_rate)
+        super().__init__(id, name)
 
-    def calculate_payroll(self):
-        return HourlyEmployee.calculate_payroll(self)
