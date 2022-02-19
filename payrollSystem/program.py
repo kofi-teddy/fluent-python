@@ -3,6 +3,7 @@
 from . import employees
 from . import productivity
 from . import hr
+from . import contacts
 
 # salary_employee = employee.SalaryEmployee(1, 'Maxine Baddoo', 1500)
 # hourly_employee = employee.HourlyEmployee(2, 'Eunice Boakye', 40, 15)
@@ -18,7 +19,19 @@ from . import hr
 # # ])
 
 manager = employees.Manager(1, 'Eunice Boakye', 3000)
+manager.address = contacts.Address(
+    'Adenta area',
+    'Accra',
+    'Ad',
+    '2233'
+)
 secretary = employees.Secretary(2, 'Baaba Aggrey', 1500)
+secretary.address = contacts.Address(
+    'Eastlegon',
+    'Lakeside',
+    'Bd',
+    '2233'
+)
 sales_guy = employees.SalesPerson(3, 'Maxine Baddoo', 1000, 250)
 factory_worker = employees.FactoryWorker(4, 'Esther Ahene', 40, 15)
 temporary_secretary = employees.TemporarySecretary(5, 'Kuukua Charlotte', 40, 9)
