@@ -59,6 +59,14 @@ class SalesPerson(Employee, SalesRole, CommissionPolicy):
         CommissionPolicy.__init__(self, weekly_salary, commission)
         super().__init__(id, name)
 
+
+
+class FactoryWorker(Employee, FactoryRole, HourlyPolicy):
+    def __init__(self, id, name, hours_worked, hour_rate):
+        HourlyPolicy.__init__(self, hours_worked, hour_rate)
+        super().__init__(id, name)
+        
+
 class CommissionEmployee(SalaryEmployee):
     
     def __init__(self, id, name, weekly_salary, commission):
