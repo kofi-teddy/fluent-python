@@ -8,7 +8,9 @@ from .hr import (
 )
 from . productivity import (
     ManagerRole,
-    S
+    SecretaryRole,
+    SalesRole,
+    FactoryRole
 )
 
 class PayrollSystem:
@@ -29,17 +31,14 @@ class Employee:
         self.id = id
         self.name = name
 
-    def calculate_payroll(self):
-        return self.weekly_salary
 
-
-class SalaryEmployee(Employee):
+class Manager(Employee, ManagerRole, SalaryPolicy):
     '''
     Permanent employees paid fixed salary weekly.
     '''
     def __init__(self, id, name, weekly_salary):
+        SalaryPolicy.__init__(self, name, weekly_salary)
         super().__init__(id, name)
-        self.weekly_salary = weekly_salary
 
 
 class HourlyEmployee(Employee):
