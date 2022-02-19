@@ -81,8 +81,11 @@ class FactoryWorker(HourlyEmployee):
 
 
 class TemporarySecretary(Secretary, HourlyEmployee):
-     '''
-     Temporary workers.
-     '''
-     def __init__(self, id, name, hours_worked, hour_rate):
-         HourlyEmployee.__init__(self, id, name, hours_worked, hour_rate)
+    '''
+    Temporary workers.
+    '''
+    def __init__(self, id, name, hours_worked, hour_rate):
+        HourlyEmployee.__init__(self, id, name, hours_worked, hour_rate)
+
+    def calculate_payroll(self):
+        return HourlyEmployee.calculate_payroll(self)
