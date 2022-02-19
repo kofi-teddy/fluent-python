@@ -37,7 +37,7 @@ class Manager(Employee, ManagerRole, SalaryPolicy):
     Permanent employees paid fixed salary weekly.
     '''
     def __init__(self, id, name, weekly_salary):
-        SalaryPolicy.__init__(self, name, weekly_salary)
+        SalaryPolicy.__init__(self, weekly_salary)
         super().__init__(id, name)
 
 
