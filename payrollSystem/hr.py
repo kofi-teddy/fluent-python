@@ -11,34 +11,23 @@ class PayrollSystem:
             print('')
 
 
-class Employee:
+class SalaryPolicy:
     '''
-    Employee base class for modeling all employees types.
+    Permanent employees paid fixed salary weekly.
     '''
-    def __init__(self, id, name):
-        self.id = id
-        self.name = name
+    def __init__(self, weekly_salary):
+        self.weekly_salary = weekly_salary
 
     def calculate_payroll(self):
         return self.weekly_salary
 
 
-class SalaryEmployee(Employee):
-    '''
-    Permanent employees paid fixed salary weekly.
-    '''
-    def __init__(self, id, name, weekly_salary):
-        super().__init__(id, name)
-        self.weekly_salary = weekly_salary
-
-
-class HourlyEmployee(Employee):
+class HourlyPolicy:
     '''
     Derived class from employee.
     Employees paid by the hour.
     '''
-    def __init__(self, id, name, hours_worked, hour_rate):
-        super().__init__(id, name)
+    def __init__(self, hours_worked, hour_rate):
         self.hours_worked = hours_worked
         self.hour_rate = hour_rate
 
@@ -46,12 +35,12 @@ class HourlyEmployee(Employee):
         return self.hours_worked * self.hour_rate
 
 
-class CommissionEmployee(SalaryEmployee):
+class CommissionEmployee(SalaryPolicy):
     '''
     Sales reps paid a fixed salary plus commission on sales.
     '''
-    def __init__(self, id, name, weekly_salary, commission):
-        super().__init__(id, name, weekly_salary)
+    def __init__(self, weekly_salary, commission):
+        super().__init__(weekly_salary)
         self.commission = commission
     
     def calculate_payroll(self):
