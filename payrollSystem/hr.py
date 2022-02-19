@@ -11,7 +11,11 @@ class PayrollSystem:
             5: HourlyPolicy(9)
         }
 
-    
+    def get_policy(self, employee_id):
+        policy = self._employee_policies.get(employee_id)
+        if not policy:
+            return ValueError(employee_id)
+        return policy
 
     def calculate_payroll(self, employees):
         print('Calculating Payroll')
