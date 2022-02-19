@@ -2,6 +2,17 @@
 # Modeling an HR system
 
 class PayrollSystem:
+    def __init__(self):
+        self_employee_policies = {
+            1: SalaryPolicy(3000),
+            2: SalaryPolicy(1500),
+            3: CommissionPolicy(1000, 100),
+            4: HourlyPolicy(15),
+            5: HourlyPolicy(9)
+        }
+
+    
+
     def calculate_payroll(self, employees):
         print('Calculating Payroll')
         print('___________________')
