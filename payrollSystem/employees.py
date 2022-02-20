@@ -1,26 +1,25 @@
 # OOP 
 # Modeling an HR system
 # Employee models
-from .hr import (
-    SalaryPolicy,
-    CommissionPolicy,
-    HourlyPolicy
-)
-from . productivity import (
+from .contacts import AddressBook
+from .hr import CommissionPolicy, HourlyPolicy, PayrollSystem, SalaryPolicy
+from .productivity import (
+    FactoryRole,
     ManagerRole,
-    SecretaryRole,
+    ProductivitySystem,
     SalesRole,
-    FactoryRole
+    SecretaryRole,
 )
 
-class PayrollSystem:
-    def calculate_payroll(self, employees):
-        print('Calculating Payroll')
-        print('___________________')
-        for employee in employees:
-            print(f'Payroll for: {employee.id} - {employee.name}')
-            print(f'- Check amount: {employee.calculate_payroll()}')
-            print('')
+
+# class PayrollSystem:
+#     def calculate_payroll(self, employees):
+#         print('Calculating Payroll')
+#         print('___________________')
+#         for employee in employees:
+#             print(f'Payroll for: {employee.id} - {employee.name}')
+#             print(f'- Check amount: {employee.calculate_payroll()}')
+#             print('')
 
 
 class Employee:
@@ -32,6 +31,50 @@ class Employee:
         self.name = name
         self.address = None
 
+
+class EmployeeDatabase:
+    def __init__(self):
+        self._employees = [
+            {
+                'id': 1,
+                'name': 'Eunice Boakye', 
+                'role': 'Manager'
+            },
+            {
+                'id': 2,
+                'name': 'Maxine Baddoo', 
+                'role': 'secretary',
+            },
+            {
+                'id': 3,
+                'name': 'Baaba Aggrey', 
+                'role': 'sales',
+            },
+            {
+                'id': 4,
+                'name': 'Esther Ahene', 
+                'role': 'factory',
+            },
+            {
+                'id': 5,
+                'name': 'Harriet Opoku', 
+                'role': 'secretary',
+            },
+        ]
+        self.productivity = ProductivitySystem()
+        self.payroll = PayrollSystem()
+        self._employee_addresses = AddressBook()
+
+    @property
+    def employees(self):
+        return [self._create_employee(**data) for data in self._employees]
+
+    def _create_employee(self, id, name, role):
+        address = self._employee_addresses.get_employee_address(id)
+        employee_role = self.productivity.get_role(role)
+        payroll_policy = self.payroll.get_policy(id)
+        return Employee(id, name, address, employee_role, payroll_policy)
+        
 
 class Manager(Employee, ManagerRole, SalaryPolicy):
     '''
