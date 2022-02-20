@@ -9,7 +9,7 @@ class ProductivitySystem:
             'factory': FactoryRole,
         }
     
-    def get_role(self,role_id):
+    def get_role(self, role_id):
         role_type = self._roles.get(role_id)
         if not role_type:
             raise ValueError('role_id')
