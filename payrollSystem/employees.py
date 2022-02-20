@@ -33,6 +33,12 @@ class Employee:
 
 
 class EmployeeDatabase:
+    '''
+    Keeps track of all the employees in the company. It has an instance of
+    the productivity_system, the payrollsystem and addresbook used to create employee.
+    The .employee property returns the list of employees and the employee objects are created by an internal
+    method ._create_employee().
+    '''
     def __init__(self):
         self._employees = [
             {
@@ -74,7 +80,7 @@ class EmployeeDatabase:
         employee_role = self.productivity.get_role(role)
         payroll_policy = self.payroll.get_policy(id)
         return Employee(id, name, address, employee_role, payroll_policy)
-        
+
 
 class Manager(Employee, ManagerRole, SalaryPolicy):
     '''
