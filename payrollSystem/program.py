@@ -1,9 +1,9 @@
 # OOP
 # Driver code
-from . import employees
-from . import productivity
-from . import hr
-from . import contacts
+from . hr import PayrollSystem
+from . productivity import ProductivitySystem
+from . employees import EmployeeDatabase
+
 
 # salary_employee = employee.SalaryEmployee(1, 'Maxine Baddoo', 1500)
 # hourly_employee = employee.HourlyEmployee(2, 'Eunice Boakye', 40, 15)
@@ -18,35 +18,37 @@ from . import contacts
 # #     temporary_secretary,
 # # ])
 
-manager = employees.Manager(1, 'Eunice Boakye', 3000)
-manager.address = contacts.Address(
-    'Adenta area',
-    'Accra',
-    'Ad',
-    '2233'
-)
-secretary = employees.Secretary(2, 'Baaba Aggrey', 1500)
-secretary.address = contacts.Address(
-    'Eastlegon',
-    'Lakeside',
-    'Bd',
-    '2233'
-)
-sales_guy = employees.SalesPerson(3, 'Maxine Baddoo', 1000, 250)
-factory_worker = employees.FactoryWorker(4, 'Esther Ahene', 40, 15)
-temporary_secretary = employees.TemporarySecretary(5, 'Kuukua Charlotte', 40, 9)
+# manager = employees.Manager(1, 'Eunice Boakye', 3000)
+# manager.address = contacts.Address(
+#     'Adenta area',
+#     'Accra',
+#     'Ad',
+#     '2233'
+# )
+# secretary = employees.Secretary(2, 'Baaba Aggrey', 1500)
+# secretary.address = contacts.Address(
+#     'Eastlegon',
+#     'Lakeside',
+#     'Bd',
+#     '2233'
+# )
+# sales_guy = employees.SalesPerson(3, 'Maxine Baddoo', 1000, 250)
+# factory_worker = employees.FactoryWorker(4, 'Esther Ahene', 40, 15)
+# temporary_secretary = employees.TemporarySecretary(5, 'Kuukua Charlotte', 40, 9)
 
-employees = [
-    manager,
-    secretary,
-    sales_guy,
-    factory_worker,
-    temporary_secretary,
-] 
+# employees = [
+#     manager,
+#     secretary,
+#     sales_guy,
+#     factory_worker,
+#     temporary_secretary,
+# ] 
 
-productivity_system = productivity.ProductivitySystem()
+productivity_system = ProductivitySystem()
+payroll_system = PayrollSystem()
+employee_database = EmployeeDatabase()
+employees = employee_database.employees
 productivity_system.track(employees, 40)
-payroll_system = hr.PayrollSystem()
 payroll_system.calculate_payroll(employees)
 
 
