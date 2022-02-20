@@ -53,8 +53,8 @@ class HourlyPolicy(PayrollPolicy):
     Derived class from employee.
     Employees paid by the hour.
     '''
-    def __init__(self, hours_worked, hour_rate):
-        self.hours_worked = hours_worked
+    def __init__(self, hour_rate):
+        super().__init__()
         self.hour_rate = hour_rate
 
     def calculate_payroll(self):
