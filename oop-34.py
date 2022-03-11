@@ -37,7 +37,7 @@ class Triangle:
         return 0.5 * self.base * self.height
 
 
-class RightPyramid(Triangle, Square):
+class RightPyramid(Square, Triangle):
     def __init__(self, base, slant_height):
         self.base = base
         self.slant_height = slant_height
@@ -55,3 +55,7 @@ class RightPyramid(Triangle, Square):
 # cube = Cube(3)
 # print(cube.surface_area())
 # print(cube.volume())
+
+pyramid = RightPyramid(2, 4)
+print(RightPyramid.__mro__)
+print(pyramid.area())
