@@ -73,4 +73,4 @@
 - ChainMap 5
 - Using get() to access dictionary
 - Descriptors
-
+- Generate secret key for django projects
