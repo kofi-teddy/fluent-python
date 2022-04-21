@@ -74,3 +74,4 @@
 - Using get() to access dictionary
 - Descriptors
 - Generate secret key for django projects
+- Using and & not operator 
