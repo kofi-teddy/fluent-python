@@ -17,7 +17,7 @@ user = [
                     "description": "My Pocket Wallet",
                     "created_at": "2022-05-01T20:34:00.968243Z",
                     "update_at": "2022-05-01T20:34:00.968256Z",
-                    "account": "59a6eed2-387b-444f-ba1c-50ae9c22b0a2"
+                    "account": "59a6eed2-387b-444f-ba1c-50ae9c22b0a2",
                 }
             ],
             "type": "individual",
@@ -27,12 +27,12 @@ user = [
             "update_at": "2022-05-01T20:31:56.877661Z",
             "user": "acf4ffc2-6144-410c-8fa9-a1478c96bdbf",
             "created_by": "99b03e54-8255-45b3-8172-fa1bb93873c0",
-            "updated_by": "99b03e54-8255-45b3-8172-fa1bb93873c0"
+            "updated_by": "99b03e54-8255-45b3-8172-fa1bb93873c0",
         },
         "phone": "112233445566",
         "firstname": "Ama",
-        "lastname": "Benyiwaa"
+        "lastname": "Benyiwaa",
     }
 ]
 
-[0]['account']['wallet'][0]['source_transaction']
+[0]["account"]["wallet"][0]["source_transaction"]
