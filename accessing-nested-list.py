@@ -8,7 +8,7 @@ user = [
                     "id": "a33ebb1f-c3b3-4236-8141-05e71c032a50",
                     "source_transaction": [],
                     "destination_transaction": [],
-                    "phone": null,
+                    "phone": "0277593330",
                     "main_balance_currency": "GHS",
                     "main_balance": "0.00",
                     "available_balance_currency": "GHS",
@@ -22,7 +22,6 @@ user = [
             ],
             "type": "individual",
             "status": "active",
-            "kyc": null,
             "created_at": "2022-05-01T20:31:36.695299Z",
             "update_at": "2022-05-01T20:31:56.877661Z",
             "user": "acf4ffc2-6144-410c-8fa9-a1478c96bdbf",
@@ -35,4 +34,8 @@ user = [
     }
 ]
 
-[0]["account"]["wallet"][0]["source_transaction"]
+# print([0]["account"]["wallet"][0]["source_transaction"])
+
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print(nested_list[2][1])
