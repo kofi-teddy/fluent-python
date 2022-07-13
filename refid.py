@@ -36,11 +36,32 @@ from io import BytesIO
 # compute_fee(1, 1000)
 
 
-def otp_generator():
-    otp = random.randint(99999, 999999)
-    print(otp)
-    return otp
+# def otp_generator():
+#     otp = random.randint(99999, 999999)
+#     print(otp)
+#     return otp
 
 
 
-otp_generator()
+# otp_generator()
+
+
+def random_string_generator(size = 10, chars = string.ascii_lowercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+
+
+
+def unique_key_generator(instance=None):
+  
+    size = random.randint(30, 70)
+    key = random_string_generator(size=size)
+
+    # Klass = instance.__class__
+    # qs_exists = Klass.objects.filter(key=key).exists()
+    # if qs_exists:
+    #     return unique_key_generator(instance)
+    print(key)
+    return key
+
+unique_key_generator()
