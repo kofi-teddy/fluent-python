@@ -54,7 +54,7 @@ def random_string_generator(size = 10, chars = string.ascii_lowercase + string.d
 
 def unique_key_generator(instance=None):
   
-    size = random.randint(30, 70)
+    size = random.randint(30, 35)
     key = random_string_generator(size=size)
 
     # Klass = instance.__class__
