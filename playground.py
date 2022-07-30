@@ -22,11 +22,22 @@
 
 # The getattr() function returns the value of the specified attribute from the specified object.
 # Use the "default" parameter to write a message when the attribute does not exist.
-class Person:
-  name = "John"
-  age = 36
-  country = "Norway"
+# class Person:
+#   name = "John"
+#   age = 36
+#   country = "Norway"
 
 
-x = getattr(Person, "no", "hello")
-print(x)
+# x = getattr(Person, "no", "hello")
+# print(x)
+
+
+class Booking():
+    PAYMENT_STATUSES = (
+        ('COM', 'PAYMENT_COMPLETE'),
+        ('INC', 'PAYMENT_INCOMPLETE'),
+        ('PAR', 'PAYMENT_PARTIALLY_COMPLETE'),
+    )
+
+
+print(Booking.PAYMENT_STATUSES[0][1])
