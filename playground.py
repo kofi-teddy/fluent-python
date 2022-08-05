@@ -32,12 +32,17 @@
 # print(x)
 
 
-class Booking():
-    PAYMENT_STATUSES = (
-        ('COM', 'PAYMENT_COMPLETE'),
-        ('INC', 'PAYMENT_INCOMPLETE'),
-        ('PAR', 'PAYMENT_PARTIALLY_COMPLETE'),
-    )
+# class Booking():
+#     PAYMENT_STATUSES = (
+#         ('COM', 'PAYMENT_COMPLETE'),
+#         ('INC', 'PAYMENT_INCOMPLETE'),
+#         ('PAR', 'PAYMENT_PARTIALLY_COMPLETE'),
+#     )
 
 
-print(Booking.PAYMENT_STATUSES[0][1])
+# print(Booking.PAYMENT_STATUSES[0][1])
+
+
+List = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(List[:2])
