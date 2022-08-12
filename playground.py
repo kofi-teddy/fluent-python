@@ -225,6 +225,6 @@ data = [
 
 # print(l)
 
-a=dict((v['email'],v) for v in data).values()
+a = dict((v['email'],v) for v in data).values()
 
 print(a)
