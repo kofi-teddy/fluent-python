@@ -459,6 +459,7 @@ import rsa
 # key length should be atleast 16
 publicKey, privateKey = rsa.newkeys(512)
  
+print(publicKey)
 # this is the string that we will be encrypting
 message = "hello geeks"
  
@@ -480,3 +481,18 @@ print("encrypted string: ", encMessage)
 decMessage = rsa.decrypt(encMessage, privateKey).decode()
  
 print("decrypted string: ", decMessage)
+
+
+# def send_email(request):
+#     ...
+#     email = EmailMessage(
+#         subject,
+#         content,
+#         contact_email,
+#         [to],
+#         headers={'Reply-To': contact_email}
+#     )
+#     if request.FILES:
+#         uploaded_file = request.FILES['file'] # file is the name value which you have provided in form for file field
+#         email.attach(uploaded_file.name, uploaded_file.read(), uploaded_file.content_type)
+#     email.send()
