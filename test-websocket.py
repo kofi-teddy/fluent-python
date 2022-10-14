@@ -150,3 +150,4 @@ async def main():
     async with websockets.serve(time, "localhost", config("WEBSOCKET_PORT")):
         await asyncio.Future()  # run forever
 asyncio.run(main())
+
