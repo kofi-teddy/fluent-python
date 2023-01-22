@@ -107,24 +107,135 @@
 ################################################################
 ################################################################
 # check if a key exist in a json block
-kyc  = {
-        "is_developer": "True",
-        "postal_address": "P.O. Box 2022",
-        "bank_name": "Stanbic Bank",
-        "bank_account": "3143210789732000",
-        "bank_branch": "Tema",
-        "business_TIN": "wt2132131",
-        "NID_director_1": "12132123412432",
-        "NID_director_2": "12131314222626",
-        "gps": "GT1213121",
-        "business_name": "Bakeries 2020",
-        "business_type": "Sole Prorietorship",
-        "business_address": "business_address",
-        "business_email": "tayebo4867@tebyy.com"
-    }
+# kyc  = {
+#         "is_developer": "True",
+#         "postal_address": "P.O. Box 2022",
+#         "bank_name": "Stanbic Bank",
+#         "bank_account": "3143210789732000",
+#         "bank_branch": "Tema",
+#         "business_TIN": "wt2132131",
+#         "NID_director_1": "12132123412432",
+#         "NID_director_2": "12131314222626",
+#         "gps": "GT1213121",
+#         "business_name": "Bakeries 2020",
+#         "business_type": "Sole Prorietorship",
+#         "business_address": "business_address",
+#         "business_email": "tayebo4867@tebyy.com"
+#     }
 
 
-if "is_developer" in kyc and "postal_address" in kyc and "bank_name" in kyc and "bank_account" in kyc and "bank_branch" in kyc and "business_TIN" and "NID_director_1" in kyc and "NID_director_2" in kyc and "gps" in kyc and "business_name" in kyc and "business_type" in kyc and "business_address" in kyc and "business_email" in kyc:
-    print("yes")
-else:
-    print("no")
+# if "is_developer" in kyc and "postal_address" in kyc and "bank_name" in kyc and "bank_account" in kyc and "bank_branch" in kyc and "business_TIN" and "NID_director_1" in kyc and "NID_director_2" in kyc and "gps" in kyc and "business_name" in kyc and "business_type" in kyc and "business_address" in kyc and "business_email" in kyc:
+#     print("yes")
+# else:
+#     print("no")
+
+
+# f = None 
+# for i in range(5):
+#     with open("app.log", "w") as f:
+#         if i > 2:
+#             break
+            
+# print(f.closed)
+
+# def add(c, k):
+#     c.test = c.test + 1
+#     k = k+1
+
+# class Plus:
+#     def __init__(self):
+#         self.test = 0
+
+# def main():
+#     p = Plus()
+
+#     index = 0
+
+#     for i in range(0, 25):
+#         add(p, index)
+
+#         print("p.test=", p.test)
+#         print("index", index)
+    
+# main()
+
+# def f(x, l=[]):
+#     for i in range(x):
+#         l.append(i*i)
+#     print(l)
+
+# f(2)
+# f(3, [3,2,1])
+# f(3)
+
+# z = set("abc")
+# z.add("san")
+# z.update(set(["p","q"]))
+# print(z)
+
+# a = [1, 2, 3, 4]
+# b=[sum(a[0:x+1]) for x in range(0, len(a))]
+# print(b)
+
+# l = [1,2,3,4,5]
+# m = map(lambda x:2**x, l)
+# print(list(m))
+
+# data = [1, 2,3]
+# def incr(x):
+#     return x+ 1
+
+# print(list(map(incr,data)))
+
+# t="%(s)s %(b)s %(c)s"
+# print(t % dict(a="Welcome", b="to", c="Turing"))
+
+# l1 = [1, 2, 6, 12]
+# l2 = [6, 12, 1, 2]
+# print(l1 == l2)
+# print(set(l1) == set(l2))
+
+
+# print(2**(3**2), (2**3)**2, (2**3)**3)
+
+
+# aa = "abcd"
+# for i in range(len(aa)):
+#     aa[i].upper()
+# print(aa)
+
+# class Wel:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def say(self):
+#         print("Welcome to ", self.name)
+
+
+# cw = Wel("Turing")
+# cw.say()
+
+# print([i.lower() for i in "TURING"])
+
+# x = "abcdef"
+# i = "a"
+# while i in x[:-1]:
+#     print(i, end=" ")
+
+
+# import re
+# result = re.findall("Welcome to Turing", "Welcome", 1)
+# print(result)
+
+# class Dev:
+#     def __init__(self):
+#         self.__seniority = "Junior"
+#         self.skills = ""
+
+#     def display(self):
+
+# def func1():
+#     x=50
+#     return x
+# func1()
+# print(x)
