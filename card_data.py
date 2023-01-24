@@ -239,3 +239,5 @@
 #     return x
 # func1()
 # print(x)
+
+print("Wingipay_to_wingipay".replace("_", " "))
