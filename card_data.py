@@ -240,4 +240,17 @@
 # func1()
 # print(x)
 
-print("Wingipay_to_wingipay".replace("_", " "))
+# print("Wingipay_to_wingipay".replace("_", " "))
+import re
+
+def validate_email(email):
+    EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
+    if EMAIL_REGEX.match(email):
+        return True
+    else:
+        return False
+
+email="info.ss@skycrew.net"
+
+print(validate_email(email))
+
