@@ -250,7 +250,7 @@ def validate_email(email):
     else:
         return False
 
-email="info.ss@skycrew.net"
+email="info.ss@skycrew.solutions"
 
 print(validate_email(email))
 
