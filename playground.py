@@ -498,15 +498,184 @@ data = [
 #     email.send()
 
 
-import re
+# import re
 
-def validate_email(email):
-    EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
-    if EMAIL_REGEX.match(email):
-        return True
-    else:
-        return False
+# def validate_email(email):
+#     EMAIL_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
+#     if EMAIL_REGEX.match(email):
+#         return True
+#     else:
+#         return False
 
-email="info.ss@skycrew.solutions"
+# email="info.ss@skycrew.solutions"
 
-print(validate_email(email))
+
+# print(validate_email(email))
+
+import datetime
+
+data = [{'month': '2022-08-01', 'count': 92}, {'month': '2022-09-01', 'count': 65}, {'month': '2022-10-01', 'count': 6}, {'month': '2022-11-01', 'count': 73}, {'month': '2022-12-01', 'count': 17}]
+
+all_date = []
+for i in data:
+    all_date.append(i["month"])
+
+print(all_date)
+
+
+from datetime import datetime, timedelta
+import pytz
+
+timezone = pytz.timezone("UTC")
+
+
+current_date = datetime.now(timezone)
+months_ago = 6
+
+month_dates = []
+for i in range(months_ago):
+    current_date = current_date - timedelta(days=1)
+    current_date = current_date.replace(day=1, hour=0, minute=0, second=0)
+    date_string = current_date.strftime("%Y-%m-%d")
+    # print(current_date)
+    # month_dates.append(str(current_date))
+    month_dates.append(str(date_string))
+print(month_dates)
+
+# for j in data:
+#     print(j["month"])
+
+
+for c in month_dates:
+    if c not in all_date:
+        me = {
+            "month": str(c),
+            "count": 0
+        }
+        data.append(me)
+
+print(data)
+# print(month_dates)
+
+# wingipay
+
+
+# [
+#     {'month': '2022-08-01 00:00:00+00:00', 'count': 92}, 
+#     {'month': '2022-09-01 00:00:00+00:00', 'count': 65}, 
+#     {'month': '2022-10-01 00:00:00+00:00', 'count': 6}, 
+#     {'month': '2022-11-01 00:00:00+00:00', 'count': 73}, 
+#     {'month': '2022-12-01 00:00:00+00:00', 'count': 17}, 
+#     {'month': '2023-01-01 00:00:00', 'count': 0}, 
+#     {'month': '2022-12-01 00:00:00', 'count': 0}, 
+#     {'month': '2022-11-01 00:00:00', 'count': 0}, 
+#     {'month': '2022-10-01 00:00:00', 'count': 0}, 
+#     {'month': '2022-09-01 00:00:00', 'count': 0}, 
+#     {'month': '2022-08-01 00:00:00', 'count': 0}
+# ]
+
+
+
+
+# [
+#     {
+#         'month': '2022-08-01 00:00:00+00:00', 
+#         'count': 92
+#     }, 
+#     {
+#         'month': '2022-09-01 00:00:00+00:00', 
+#         'count': 65
+#     }, 
+#     {
+#         'month': '2022-10-01 00:00:00+00:00', 
+#         'count': 6
+#     }, 
+#     {
+#         'month': '2022-11-01 00:00:00+00:00', 
+#         'count': 73
+#     }, 
+#     {
+#         'month': '2022-12-01 00:00:00+00:00', 
+#         'count': 17
+#     }, 
+#     {
+#         'month': '2023-01-01 10:34:45.296237', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-12-01 10:34:45.296237', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-11-01 10:34:45.296237', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-10-01 10:34:45.296237', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-09-01 10:34:45.296237', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-08-01 10:34:45.296237', 
+#         'count': 0
+#     }
+# ]
+
+
+# [
+#     {
+#         'month': '2022-08-01 00:00:00+00:00', 
+#         'count': 92
+#     }, 
+#     {
+#         'month': '2022-09-01 00:00:00+00:00', 
+#         'count': 65
+#     }, 
+#     {
+#         'month': '2022-10-01 00:00:00+00:00', 
+#         'count': 6
+#     }, 
+#     {
+#         'month': '2022-11-01 00:00:00+00:00', 
+#         'count': 73
+#     }, 
+#     {
+#         'month': '2022-12-01 00:00:00+00:00', 
+#         'count': 17
+#     }, 
+#     {
+#         'month': '2023-01-01 00:00:00+0000', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-12-01 00:00:00+0000', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-11-01 00:00:00+0000', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-10-01 00:00:00+0000', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-09-01 00:00:00+0000', 
+#         'count': 0
+#     }, 
+#     {
+#         'month': '2022-08-01 00:00:00+0000', 
+#         'count': 0
+#     }]
+
+[
+    {'month': '2022-08-01', 'count': 92}, 
+    {'month': '2022-09-01', 'count': 65}, 
+    {'month': '2022-10-01', 'count': 6}, 
+    {'month': '2022-11-01', 'count': 73}, 
+    {'month': '2022-12-01', 'count': 17}, 
+    {'month': '2023-01-01', 'count': 0}
+]
