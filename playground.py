@@ -512,52 +512,46 @@ data = [
 
 # print(validate_email(email))
 
-import datetime
+# import datetime
 
-data = [{'month': '2022-08-01', 'count': 92}, {'month': '2022-09-01', 'count': 65}, {'month': '2022-10-01', 'count': 6}, {'month': '2022-11-01', 'count': 73}, {'month': '2022-12-01', 'count': 17}]
+# data = [{'month': '2022-08-01', 'count': 92}, {'month': '2022-09-01', 'count': 65}, {'month': '2022-10-01', 'count': 6}, {'month': '2022-11-01', 'count': 73}, {'month': '2022-12-01', 'count': 17}]
 
-all_date = []
-for i in data:
-    all_date.append(i["month"])
+# all_date = []
+# for i in data:
+#     all_date.append(i["month"])
 
-print(all_date)
-
-
-from datetime import datetime, timedelta
-import pytz
-
-timezone = pytz.timezone("UTC")
+# print("ad", all_date)
 
 
-current_date = datetime.now(timezone)
-months_ago = 6
+# from datetime import datetime, timedelta
+# import pytz
 
-month_dates = []
-for i in range(months_ago):
-    current_date = current_date - timedelta(days=1)
-    current_date = current_date.replace(day=1, hour=0, minute=0, second=0)
-    date_string = current_date.strftime("%Y-%m-%d")
-    # print(current_date)
-    # month_dates.append(str(current_date))
-    month_dates.append(str(date_string))
-# print(month_dates)
-
-# for j in data:
-#     print(j["month"])
+# timezone = pytz.timezone("UTC")
 
 
-for c in month_dates:
-    if c not in all_date:
-        me = {
-            "month": str(c),
-            "count": 0
-        }
-        data.append(me)
+# current_date = datetime.now(timezone)
+# months_ago = 6
 
-print(data)
-# print(month_dates)
+# month_dates = []
+# for i in range(months_ago):
+#     current_date = current_date - timedelta(days=1)
+#     current_date = current_date.replace(day=1, hour=0, minute=0, second=0)
+#     date_string = current_date.strftime("%Y-%m-%d")
+#     month_dates.append(str(date_string))
 
-# wingipay
+# print("md", month_dates)
+
+# for c in month_dates:
+#     if c not in all_date:
+#         me = {
+#             "month": str(c),
+#             "count": 0
+#         }
+#         data.append(me)
+
+# print("d", data)
+
+
 
 
 
