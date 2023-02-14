@@ -553,6 +553,6 @@ data = [
 
 
 
-
-
+mee = "fdscvsad" * 3
+print(mee)
 
