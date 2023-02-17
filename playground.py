@@ -553,6 +553,17 @@ data = [
 
 
 
-mee = "fdscvsad" * 3
-print(mee)
+# mee = "fdscvsad" * 3
+# print(mee)
 
+install_apps = [
+    "School",
+    "shop",
+]
+
+install_apps += [
+    "office"
+]
+
+
+print(install_apps)
