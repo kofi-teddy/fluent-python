@@ -556,14 +556,27 @@ data = [
 # mee = "fdscvsad" * 3
 # print(mee)
 
-install_apps = [
-    "School",
-    "shop",
-]
+# install_apps = [
+#     "School",
+#     "shop",
+# ]
 
-install_apps += [
-    "office"
-]
+# install_apps += [
+#     "office"
+# ]
 
 
-print(install_apps)
+# print(install_apps)
+
+
+fee = 1.50
+amount = 100.00
+
+def compute_merchant_service_fee(fee, amount):
+    # service_fee = ServiceFee.objects.get(account=account, service_code=service_id)
+    # fee = service_fee.fee
+    service_charge = fee * amount / 100
+
+    print(service_charge)
+
+compute_merchant_service_fee(fee, amount)
