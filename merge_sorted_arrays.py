@@ -31,7 +31,8 @@ def merge(array_1: List[int], array_2: List[int]) -> List[int]:
         elif array_1[array_1_pointer] < array_2[array_2_pointer]:
             new_array.append(array_1[array_1_pointer])
             array_1_pointer += 1
-        # If the current number in second array is less than or equal to current number in first array, add from second array:
+        # If the current number in second array is less than or equal to current number in first array, 
+        # add from second array:
         else:
             new_array.append(array_2[array_2_pointer])
             array_2_pointer += 1

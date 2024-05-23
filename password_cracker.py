@@ -1,5 +1,6 @@
 import itertools
 
+
 def every_password(n: int) -> None:
     """
     Prints all possible passwords of length n, consisting of lowercase letters.
