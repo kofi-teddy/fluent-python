@@ -33,5 +33,5 @@ class Solution(object):
     
 
 solution = Solution()
-print(solution.restoreMatrix([3,8], [4,7])) # [[3,0],[1,7]]
+print(solution.restoreMatrix([3, 8], [4, 7])) # [[3,0],[1,7]]
 print(solution.restoreMatrix([5, 7, 10], [8, 6, 8])) #[[0,5,0],[6,1,0],[2,0,8]]
