@@ -5,7 +5,6 @@
 # Return names sorted in descending order by the people's heights.
 
  
-
 # Example 1:
 
 # Input: names = ["Mary","John","Emma"], heights = [180,165,170]
@@ -29,6 +28,7 @@
 
 
 class Solution(object):
+
     def sortPeople(self, names, heights):
         """
         :type names: List[str]
