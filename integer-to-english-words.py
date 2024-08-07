@@ -15,7 +15,7 @@
 # 0 <= num <= 231 - 1
 
 class Solution(object):
-    def number_to_words(self, num: int) -> str:
+    def number_to_words(self, num):
         """
         :type num: int
         :rtype: str
