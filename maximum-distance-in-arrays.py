@@ -22,9 +22,15 @@
 # arrays[i] is sorted in ascending order.
 # There will be at most 105 integers in all the arrays.
 
+# The algorithm processes each array once, and for each array, it performs 
+# constant-time operations (finding the first and last element, calculating 
+# distances). Hence, the time complexity is O(m), where m is the number of 
+# arrays.
+
 
 def maxDistance(arrays: list[list[int]]) -> int:
-    # Initialize min_val and max_val with the first array's first and last element
+    # Initialize min_val and max_val with the first array's first 
+    # and last element
     min_val, max_val = arrays[0][0], arrays[0][-1]
     max_distance = 0
     
@@ -35,7 +41,10 @@ def maxDistance(arrays: list[list[int]]) -> int:
         current_max = arrays[i][-1]
         
         # Calculate the two potential distances
-        max_distance = max(max_distance, abs(current_max - min_val), abs(max_val - current_min))
+        max_distance = max(
+            max_distance, 
+            abs(current_max - min_val), abs(max_val - current_min)
+        )
         
         # Update global min_val and max_val
         min_val = min(min_val, current_min)
