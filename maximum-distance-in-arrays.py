@@ -22,6 +22,7 @@
 # arrays[i] is sorted in ascending order.
 # There will be at most 105 integers in all the arrays.
 
+
 def maxDistance(arrays: list[list[int]]) -> int:
     # Initialize min_val and max_val with the first array's first and last element
     min_val, max_val = arrays[0][0], arrays[0][-1]
