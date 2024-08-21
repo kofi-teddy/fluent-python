@@ -28,30 +28,46 @@
 # s consists of lowercase English letters.
 
 
-class Solution:
-    def strange_printer(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        n = len(s)
-        dp = [[0] * n for _ in range(n)]
-    
-        for i in range(n):
-            dp[i][i] = 1
-    
-        for length in range(2, n+1):
-            for i in range(n - length + 1):
-                j = i + length - 1
-                dp[i][j] = dp[i][j-1] + 1
-                for k in range(i, j):
-                    dp[i][j] = min(dp[i][j], dp[i][k] + dp[k+1][j])
-                if s[i] == s[j]:
-                    dp[i][j] = min(dp[i][j], dp[i][j-1])
-        
-        return dp[0][n-1]
-    
+class StrangePrinter:
+    def __init__(self, s: str):
+        # Store the input string and its length
+        self.s = s
+        self.n = len(s)
+        # Initialize a 2D DP array
+        self.dp = [[0] * self.n for _ in range(self.n)]
 
-sample_string = "aaabbb"
-strange_printer = Solution.strange_printer()
-print(strange_printer(sample_string))
+    def calculate_min_turns(self):
+        # Base case: A single character can be printed in one turn
+        for i in range(self.n):
+            self.dp[i][i] = 1
+        
+        # Consider substrings of increasing lengths starting from 2 to n
+        for length in range(2, self.n + 1):
+            for i in range(self.n - length + 1):
+                # j is the end index of the current substring
+                j = i + length - 1  
+                
+                # Assume we print the entire substring from i to j in one 
+                # turn and then one more turn for the last character
+                self.dp[i][j] = self.dp[i][j-1] + 1
+                
+                # Check all possible split points to see if we can reduce 
+                # the number of turns by splitting the problem
+                for k in range(i, j):
+                    self.dp[i][j] = min(self.dp[i][j], self.dp[i][k] + self.dp[k + 1][j])
+                
+                # If the first and last characters of the substring are the same,
+                # we can print the substring from i to j in the same number of 
+                # turns as dp[i][j-1].
+                if self.s[i] == self.s[j]:
+                    self.dp[i][j] = min(self.dp[i][j], self.dp[i][j-1])
+        
+        # The answer for the entire string is stored in dp[0][n-1]
+        return self.dp[0][self.n - 1]
+
+
+# Example usage:
+s = "aba"
+printer = StrangePrinter(s)
+print(printer.calculate_min_turns())  
+# Output: 2
