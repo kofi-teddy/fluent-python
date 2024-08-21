@@ -54,7 +54,9 @@ class StrangePrinter:
                 # Check all possible split points to see if we can reduce 
                 # the number of turns by splitting the problem
                 for k in range(i, j):
-                    self.dp[i][j] = min(self.dp[i][j], self.dp[i][k] + self.dp[k + 1][j])
+                    self.dp[i][j] = min(
+                        self.dp[i][j], self.dp[i][k] + self.dp[k + 1][j]
+                    )
                 
                 # If the first and last characters of the substring are the same,
                 # we can print the substring from i to j in the same number of 
