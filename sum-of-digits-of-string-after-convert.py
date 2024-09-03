@@ -27,22 +27,20 @@
 # - Transform #1: 9999 ➝ 9 + 9 + 9 + 9 ➝ 36
 # Thus the resulting integer is 36.
 
+def get_lucky(s: str, k: int) -> int:
+    # convert the string to a numeric string
+    numeric_string = ''.join(str(ord(char) -  ord("a") + 1) for char in s)
 
-def getLucky(s: str, k: int) -> int:
-    # Step 1: Convert the string to a numeric string
-    numeric_string = ''.join(str(ord(char) - ord('a') + 1) for char in s)
-    
-    # Step 2: Perform the transformation k times
+    # perform the transformation k times
     current_value = sum(int(digit) for digit in numeric_string)
-    
+
     for _ in range(k - 1):
         current_value = sum(int(digit) for digit in str(current_value))
-    
+
     return current_value
 
 
-# Example usage:
 s = "iiii"
 k = 1
-result = getLucky(s, k)
-print(result)  # Output should be 36
+result = get_lucky(s, k)
+print(result)
