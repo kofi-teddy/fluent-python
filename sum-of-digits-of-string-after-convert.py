@@ -29,7 +29,7 @@
 
 def get_lucky(s: str, k: int) -> int:
     # convert the string to a numeric string
-    numeric_string = ''.join(str(ord(char) -  ord("a") + 1) for char in s)
+    numeric_string = ''.join(str(ord(char) - ord("a") + 1) for char in s)
 
     # perform the transformation k times
     current_value = sum(int(digit) for digit in numeric_string)
