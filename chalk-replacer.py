@@ -15,7 +15,6 @@
 
 # Return the index of the student that will replace the chalk 
 # pieces.
-
 from typing import List
 
 

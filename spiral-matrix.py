@@ -75,8 +75,7 @@ class Solution(object):
 solution = Solution()
 print(solution.spiral_matrix(1, 4, 0, 0))  
 # Output: [[0,0],[0,1],[0,2],[0,3]]
-
-
+ 
 
 print(solution.spiral_matrix(5, 6, 1, 4))  
 # Output: [[1,4],[1,5],[2,5],[2,4],[2,3],[1,3],[0,3],[0,4],[0,5],[3,5],[3,4],
