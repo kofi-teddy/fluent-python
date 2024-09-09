@@ -41,7 +41,7 @@ def spiral_matrix(m, n, head):
     matrix = [[-1] * n for _ in range(m)]
 
     # initialize boundaries
-    top, bottom, left, right = 0, m -1, 0, n - 1
+    top, bottom, left, right = 0, m - 1, 0, n - 1
 
     # start from the head of the linked list
     current = head
