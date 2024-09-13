@@ -52,3 +52,8 @@ def xor_queries(arr, queries):
             result.append(prefixXOR[right] ^ prefixXOR[left - 1])
 
     return result
+
+
+arr = [1, 3, 4, 8]
+queries = [[0, 1], [1, 2], [0, 3], [3, 3]]
+print(xor_queries(arr, queries))
