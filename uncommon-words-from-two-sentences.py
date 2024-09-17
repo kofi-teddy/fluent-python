@@ -44,3 +44,7 @@ def uncommon_from_sentences(s1: str, s2: str):
 
     # return words that appear exactly once
     return [word for word, count in word_count.items() if count == 1]
+
+
+s1, s2 = "apple apple", "banana"
+print(uncommon_from_sentences(s1, s2))
