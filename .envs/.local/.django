@@ -1,0 +1,42 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+SECRET_KEY=o(g%hk1d#)^ppr%k@1np8h$2_c)rxs45#)o(^y*opcw@a071ch
+DEBUG=True
+LOCAL_HOSTS=.localhost, .127.0.0.1, .34.201.94.255, .test.collegeleagueapp.com, .www.test.collegeleagueapp.com
+DJANGO_SETTINGS_MODULE=config.settings.production
+
+# Gmail Email
+# ------------------------------------------------------------------------------
+EMAIL_HOST=smtp.gmail.com
+EMAIL_HOST_USER=tmagudogo@gmail.com
+EMAIL_HOST_PASSWORD=zjzueqgxjeucuell
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+
+# Host Address
+# ------------------------------------------------------------------------------
+HOST_ADDRESS=https://cla.onrender.com
+
+# Oauth2
+# ------------------------------------------------------------------------------
+OAUTH2_CLIENT_ID=2u5Nn90XTbZA22pXev3p10ZdcTZq2QZFTLW3Ij9
+OAUTH2_CLIENT_SECRET=quchIlD06VZlUTEbfdqktA7lWZPPlR1m8RDWaQOUic1hJXVM47yBtI1jEI2dGg9TtYVNdnedncDTg8ghdyQrKguDzQazKo3WumIiVaSpvp0sXNCgQzwwM0bWcqyX98fs
+
+# PyOTP
+# ------------------------------------------------------------------------------
+OTP_SECRET_KEY=JBSWY3DPEHPK3PXP
+
+# Sendgrid
+# ------------------------------------------------------------------------------
+SENDGRID_API_KEY=""
+
+# Azure
+# ------------------------------------------------------------------------------
+AZURE_ACCOUNT_NAME=tmateststorage123
+AZURE_ACCOUNT_KEY=vdGcN0KoWIcwvIL4XzX49bJbGeXIFX9IPrIzgsX9LaR87U1ttCMwzXNJ0mqUmt9ODC8WNdaa9+KR+ASt+sZ14g==
+AZURE_CONTAINER_STATIC=static
+AZURE_CONTAINER_MEDIA=media
+AZURE_QUERYSTRING_AUTH=""
+AZURE_URL_EXPIRATION_SECS=""
