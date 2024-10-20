@@ -11,7 +11,4 @@ def tower_of_hanoi(n: int, A: str, B: str, C: str) -> None:
     tower_of_hanoi(n-1, B, A, C)
 
 
-
 tower_of_hanoi(3, 'A', 'B', 'C')
-
-
